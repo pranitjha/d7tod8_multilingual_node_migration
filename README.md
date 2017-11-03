@@ -6,7 +6,7 @@ We have used English and Hindi languages to demonstrate this, and article node t
 
 Here you will find 2 code base with DB.
 
-1. Drupal 7 codebase is named as drupal7 and it has a database drupal.sql inside drupal7/ folder.
+1. Drupal 7 codebase is named as drupal7 and it has a database drupa.sql inside drupal7/ folder.
 2. Drupal 8 codebase is names as drupal8 and it has a database d8_migrate.sql inside drupal8/ folder.
 
 Both the codebase has all the required modules for multilingual support and database has all the related settings.
