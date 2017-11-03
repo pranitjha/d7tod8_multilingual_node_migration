@@ -1,0 +1,6 @@
+name: City Guide Theme
+type: theme
+description: A simple theme for our city guide
+package: Custom
+core: 8.x
+base theme: classy

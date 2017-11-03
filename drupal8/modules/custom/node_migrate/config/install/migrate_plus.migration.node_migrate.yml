@@ -1,0 +1,40 @@
+id: node_migrate
+label: Migrate node from D7 database.
+migration_group: custom
+migration_tags:
+  - node
+  - article
+  - d7
+source:
+  plugin: article_node
+  node_type: article
+  key: migrate
+  # Static values for the migration.
+  constants:
+    uid_root: 1
+    node_article: 'article'
+destination:
+  plugin: 'entity:node'
+  bundle: article
+process:
+  langcode:
+    plugin: default_value
+    source: language
+    default_value: en
+  title: title
+  body:
+    plugin: iterator
+    source: body
+    process:
+      value: value
+      format:
+        plugin: default_value
+        default_value: full_html
+  type: constants/node_article
+  uid: 'constants/uid_root'
+  status: status
+  created: created
+dependencies:
+  enforced:
+    module:
+      - node_migrate
